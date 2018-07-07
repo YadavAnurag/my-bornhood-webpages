@@ -1,0 +1,44 @@
+<html>
+<head><title>NewTitle</title>
+<script>
+
+	function fun(value){    
+		if (value==2) {
+			 a = parseInt(document.getElementById("first").value);
+			 b = parseInt(document.getElementById("first").value);
+			 document.getElementById("result").value=a+b;
+		}
+		if (value==3) {
+			 a = parseInt(document.getElementById("first").value);
+			 b = parseInt(document.getElementById("first").value);
+			 document.getElementById("result").value = a-b;
+		}
+		if (value==4) {
+			 a = parseInt(document.getElementById("first").value);
+			 b = parseInt(document.getElementById("first").value);
+			 document.getElementById("result").value = a*b;
+		}
+		else {
+			 a = parseInt(document.getElementById("first").value);
+			 b = parseInt(document.getElementById("first").value);
+			 document.getElementById("result").innerTHML = a/b;
+		}
+	}
+</script>
+</head>
+<body>
+	<h1 >Input first number</h1>
+	<input type="number" placeholder="enter the first number" id="first" />
+	<h1>Input second number</h1>
+	<input type="number" placeholder="enter the second number" id="second" /><br /><br />
+	<select onmousedown="this.value='';"	onchange="fun(this.value)">
+		
+		<option value="2">Addition</option>
+		<option value="3">Subtraction</option>
+		<option value="4">Multiplication</option>
+		<option value="5">Division</option>
+	</select>	<br /><br />	
+	<input type="text" id="result" placeholder="result" value="3" />
+	<h1 id="resudlt"></h1>
+</body>
+</html>

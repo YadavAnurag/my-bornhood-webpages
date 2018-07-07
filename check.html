@@ -1,0 +1,17 @@
+<html><head>
+<script>
+function jsFunction(value)
+{
+    document.getElementById("anu").innerHTML="asdfasdf";
+}
+</script>
+</head>
+<body>
+<select id ="ddl" name="ddl" onmousedown="this.value='';" onchange="jsFunction(this.value);">
+  <option value='1'>One</option>
+  <option value='2'>Two</option>
+  <option value='3'>Three</option>
+</select>
+<h1 id="anu"></h1>
+</body>
+<html>

@@ -1,0 +1,15 @@
+if (isset($_POST)){
+        if ($_POST['submit'] == "Save Text to Server"  && !empty($_POST['filename'])) {
+            global $fliename;
+            $filename = $_POST['filename'] . ".java";
+            if(!file_exists("$filename")){
+                $file = tmpfile();
+            }
+            $file = fopen("$filename","a+");
+            while(!feof($file)){
+                $old = $old . fgets($file). "<br />";
+            }
+            $text = $_POST["textdata"];
+            file_put_contents("$filename", $old . $text);
+            fclose($file);
+        }
